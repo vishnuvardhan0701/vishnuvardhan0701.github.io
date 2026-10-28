@@ -374,7 +374,7 @@ footer{padding-block:28px 40px;font:12px var(--f-mono);color:var(--muted);displa
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Vishnuvardhan R, home"><i></i><span>Vishnuvardhan R</span></a>
     <nav class="nav" aria-label="Sections">
-      <a href="#stack">Products</a><a href="#journey">Journey</a><a href="#lab">Underwriting lab</a><a href="#cvi">Climate risk</a><a href="#approach">Approach</a><a href="#recognition">Recognition</a><a href="#transform">AI &amp; digital</a><a href="#contact">Contact</a>
+      <a href="#stack">Products</a><a href="#journey">Journey</a><a href="#recognition">Recognition</a><a href="#cvi">Climate risk</a><a href="#lab">Underwriting lab</a><a href="#transform">AI &amp; digital</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
     </nav>
     <div class="tools">
       <button class="cmdk" id="openPalette" aria-label="Open command menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="t">Jump to</span><span class="kbd">⌘K</span></button>
@@ -455,11 +455,70 @@ footer{padding-block:28px 40px;font:12px var(--f-mono);color:var(--muted);displa
     </div>
   </section>
 
+  <section id="recognition">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><b>03</b> Recognition &amp; rooms</div>
+        <h2>Out in the field, on the stage.</h2>
+        <p class="lede">I pitch, present and run workshops with banks, state governments and regulators. A few moments from the last year.</p>
+      </div>
+      <div class="wins">
+        <div class="win"><span class="y">2026 · NABARD</span><b>Winner, Climate Resilience Agriculture Innovation Challenge</b><span>For the village level CVI concept.</span></div>
+        <div class="win"><span class="y">2026 · RBI</span><b>Core team, RBI Regulatory Sandbox</b><span>Selected for ULI and Sustainable Finance.</span></div>
+        <div class="win"><span class="y">COP30 · Brazil</span><b>Top 5 global, DPI4PP Innovation Challenge</b><span>Core team member, SatSure Digital Water Stack.</span></div>
+        <div class="win"><span class="y">2025 · Station F, Paris</span><b>IndiaAI Global Cohort</b><span>Contributed to SatSure's selection, representing India on AI and EO.</span></div>
+        <div class="win"><span class="y">2025 · Kenya</span><b>Cross border market entry</b><span>Through the Gates Foundation backed SSAGA initiative.</span></div>
+        <div class="win"><span class="y">FY24 · FY23</span><b>Customer Champion, SatSure · Best Employee, IDFC</b><span>Plus gold medals at MANAGE and TNAU.</span></div>
+      </div>
+      <div class="gallery-tools" id="galTools">
+        <button class="chip on" data-g="all">All</button>
+        <button class="chip" data-g="stage">On stage</button>
+        <button class="chip" data-g="gov">With governments</button>
+        <button class="chip" data-g="award">Awards</button>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section id="cvi" style="background:var(--paper-2);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><b>04</b> Climate Vulnerability Index</div>
+        <h2>Climate hazard, priced into the portfolio.</h2>
+        <p class="lede">I conceived the CVI: it converts climate hazard models into village and portfolio level risk scores a lender can act on. It took SatSure into empanelment with the Reserve Bank of India and won the NABARD Climate Resilience Agriculture Innovation Challenge. Reweight the hazards, click any village, see where the book is exposed.</p>
+      </div>
+      <div class="cvi">
+        <div class="mapbox">
+          <div class="map-tools">
+            <div class="presets" id="hazards">
+              <button class="chip on" data-h="all">Composite</button>
+              <button class="chip" data-h="d">Drought</button>
+              <button class="chip" data-h="f">Flood</button>
+              <button class="chip" data-h="h">Heat</button>
+            </div>
+            <div class="legend"><span>low</span><i></i><span>high</span></div>
+          </div>
+          <svg id="hexmap" role="img" aria-label="Hex map of villages colored by climate vulnerability, dots show loan accounts"></svg>
+          <div class="ramp" style="margin-top:4px"><span>● dots = loan accounts in that village · synthetic district for illustration</span></div>
+        </div>
+        <div class="side">
+          <div class="kpi alert"><div class="n" id="kExp">0%</div><div class="l">of loan book in high vulnerability villages</div></div>
+          <div class="kpi"><div class="n" id="kVil">0</div><div class="l">villages flagged for review</div></div>
+          <div class="kpi wbox wide">
+            <div class="field"><label for="wd">Drought weight <span class="v" id="wdV">40%</span></label><input type="range" id="wd" min="0" max="100" value="40"></div>
+            <div class="field"><label for="wf">Flood weight <span class="v" id="wfV">35%</span></label><input type="range" id="wf" min="0" max="100" value="35"></div>
+            <div class="field"><label for="wh">Heat weight <span class="v" id="whV">25%</span></label><input type="range" id="wh" min="0" max="100" value="25"></div>
+          </div>
+          <div class="kpi vcard wide" id="vcard"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="lab">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow"><b>03</b> Underwriting lab</div>
+        <div class="eyebrow"><b>05</b> Underwriting lab</div>
         <h2>Underwrite a farm from orbit.</h2>
         <p class="lede">A playable sketch of the thinking behind SatSource, the ML farm underwriting product I drive. It scores borrower land from satellite, weather and land record signals, so a lender can skip the field visit when the evidence is strong. Move the inputs and watch the credit memo rewrite itself.</p>
       </div>
@@ -508,87 +567,10 @@ footer{padding-block:28px 40px;font:12px var(--f-mono);color:var(--muted);displa
     </div>
   </section>
 
-  <section id="cvi" style="background:var(--paper-2);border-block:1px solid var(--line)">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="eyebrow"><b>04</b> Climate Vulnerability Index</div>
-        <h2>Climate hazard, priced into the portfolio.</h2>
-        <p class="lede">I conceived the CVI: it converts climate hazard models into village and portfolio level risk scores a lender can act on. It took SatSure into empanelment with the Reserve Bank of India and won the NABARD Climate Resilience Agriculture Innovation Challenge. Reweight the hazards, click any village, see where the book is exposed.</p>
-      </div>
-      <div class="cvi">
-        <div class="mapbox">
-          <div class="map-tools">
-            <div class="presets" id="hazards">
-              <button class="chip on" data-h="all">Composite</button>
-              <button class="chip" data-h="d">Drought</button>
-              <button class="chip" data-h="f">Flood</button>
-              <button class="chip" data-h="h">Heat</button>
-            </div>
-            <div class="legend"><span>low</span><i></i><span>high</span></div>
-          </div>
-          <svg id="hexmap" role="img" aria-label="Hex map of villages colored by climate vulnerability, dots show loan accounts"></svg>
-          <div class="ramp" style="margin-top:4px"><span>● dots = loan accounts in that village · synthetic district for illustration</span></div>
-        </div>
-        <div class="side">
-          <div class="kpi alert"><div class="n" id="kExp">0%</div><div class="l">of loan book in high vulnerability villages</div></div>
-          <div class="kpi"><div class="n" id="kVil">0</div><div class="l">villages flagged for review</div></div>
-          <div class="kpi wbox wide">
-            <div class="field"><label for="wd">Drought weight <span class="v" id="wdV">40%</span></label><input type="range" id="wd" min="0" max="100" value="40"></div>
-            <div class="field"><label for="wf">Flood weight <span class="v" id="wfV">35%</span></label><input type="range" id="wf" min="0" max="100" value="35"></div>
-            <div class="field"><label for="wh">Heat weight <span class="v" id="whV">25%</span></label><input type="range" id="wh" min="0" max="100" value="25"></div>
-          </div>
-          <div class="kpi vcard wide" id="vcard"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="approach">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="eyebrow"><b>05</b> How I build</div>
-        <h2>Four loops I run on every product.</h2>
-        <p class="lede">Digital transformation fails at the handoffs: field to model, model to system, system to the people who use it. My process is built around those handoffs, whatever the industry.</p>
-      </div>
-      <div class="approach">
-        <div class="step"><span class="num">LOOP 1</span><h3>Discover</h3><p>Sit with credit officers, field teams and client leadership. Turn voice of customer and deployment findings into a ranked problem list.</p><div class="proof"><b>In practice</b>Structured discovery with 8+ enterprise accounts fed directly into the roadmap.</div></div>
-        <div class="step"><span class="num">LOOP 2</span><h3>Define</h3><p>PRDs, user stories and acceptance criteria written as lender outcomes: hit rate, freshness, manual effort saved, client impact.</p><div class="proof"><b>In practice</b>Six module platform with standardized data schemas across institutions.</div></div>
-        <div class="step"><span class="num">LOOP 3</span><h3>Deliver</h3><p>Backlog prioritization and sprints with engineering and data science. Ship into the lender's own stack through APIs and LOS integrations.</p><div class="proof"><b>In practice</b>SatSource scores delivered via API into origination workflows.</div></div>
-        <div class="step"><span class="num">LOOP 4</span><h3>Distribute</h3><p>GTM, POCs, RFPs and regulatory paths. Adoption analytics go back into loop 1.</p><div class="proof"><b>In practice</b>CVI empanelment with RBI; first GTM beyond agriculture for utilities.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="recognition" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="eyebrow"><b>06</b> Recognition &amp; rooms</div>
-        <h2>Out in the field, on the stage.</h2>
-        <p class="lede">I pitch, present and run workshops with banks, state governments and regulators. A few moments from the last year.</p>
-      </div>
-      <div class="wins">
-        <div class="win"><span class="y">2026 · NABARD</span><b>Winner, Climate Resilience Agriculture Innovation Challenge</b><span>For the village level CVI concept.</span></div>
-        <div class="win"><span class="y">2026 · RBI</span><b>Core team, RBI Regulatory Sandbox</b><span>Selected for ULI and Sustainable Finance.</span></div>
-        <div class="win"><span class="y">COP30 · Brazil</span><b>Top 5 global, DPI4PP Innovation Challenge</b><span>Core team member, SatSure Digital Water Stack.</span></div>
-        <div class="win"><span class="y">2025 · Station F, Paris</span><b>IndiaAI Global Cohort</b><span>Contributed to SatSure's selection, representing India on AI and EO.</span></div>
-        <div class="win"><span class="y">2025 · Kenya</span><b>Cross border market entry</b><span>Through the Gates Foundation backed SSAGA initiative.</span></div>
-        <div class="win"><span class="y">FY24 · FY23</span><b>Customer Champion, SatSure · Best Employee, IDFC</b><span>Plus gold medals at MANAGE and TNAU.</span></div>
-      </div>
-      <div class="gallery-tools" id="galTools">
-        <button class="chip on" data-g="all">All</button>
-        <button class="chip" data-g="stage">On stage</button>
-        <button class="chip" data-g="gov">With governments</button>
-        <button class="chip" data-g="award">Awards</button>
-      </div>
-      <div class="gallery" id="gallery"></div>
-    </div>
-  </section>
-
   <section id="transform" class="txsec">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow"><b>07</b> AI &amp; digital transformation</div>
+        <div class="eyebrow"><b>06</b> AI &amp; digital transformation</div>
         <h2>One playbook, four arenas.</h2>
         <p class="lede">Manual to digital, across banking, consulting, startups and large institutions.</p>
       </div>
@@ -602,6 +584,22 @@ footer{padding-block:28px 40px;font:12px var(--f-mono);color:var(--muted);displa
       <div class="tx-caps">
         <div class="tx-chips" id="txChips"></div>
         <p class="tx-note" id="txNote">Tap a capability to see where it was used.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><b>07</b> How I build</div>
+        <h2>Four loops I run on every product.</h2>
+        <p class="lede">Digital transformation fails at the handoffs: field to model, model to system, system to the people who use it. My process is built around those handoffs, whatever the industry.</p>
+      </div>
+      <div class="approach">
+        <div class="step"><span class="num">LOOP 1</span><h3>Discover</h3><p>Sit with credit officers, field teams and client leadership. Turn voice of customer and deployment findings into a ranked problem list.</p><div class="proof"><b>In practice</b>Structured discovery with 8+ enterprise accounts fed directly into the roadmap.</div></div>
+        <div class="step"><span class="num">LOOP 2</span><h3>Define</h3><p>PRDs, user stories and acceptance criteria written as lender outcomes: hit rate, freshness, manual effort saved, client impact.</p><div class="proof"><b>In practice</b>Six module platform with standardized data schemas across institutions.</div></div>
+        <div class="step"><span class="num">LOOP 3</span><h3>Deliver</h3><p>Backlog prioritization and sprints with engineering and data science. Ship into the lender's own stack through APIs and LOS integrations.</p><div class="proof"><b>In practice</b>SatSource scores delivered via API into origination workflows.</div></div>
+        <div class="step"><span class="num">LOOP 4</span><h3>Distribute</h3><p>GTM, POCs, RFPs and regulatory paths. Adoption analytics go back into loop 1.</p><div class="proof"><b>In practice</b>CVI empanelment with RBI; first GTM beyond agriculture for utilities.</div></div>
       </div>
     </div>
   </section>
@@ -689,7 +687,7 @@ let ri=0; if(!RM) setInterval(()=>{ri=(ri+1)%rot.length;const el=$('#rotator');e
 $('#rotator').style.transition='opacity .2s';
 
 /* progress + nav highlight */
-const secs=['stack','journey','lab','cvi','approach','recognition','transform','contact'];
+const secs=['stack','journey','recognition','cvi','lab','transform','approach','contact'];
 addEventListener('scroll',()=>{const h=document.documentElement;$('#progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
   let cur='';for(const id of secs){const e=document.getElementById(id);if(e.getBoundingClientRect().top<120)cur=id}
   $$('.nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))},{passive:true});
